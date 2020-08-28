@@ -1,0 +1,31 @@
+﻿@using CoreDemo.models
+
+@model IEnumerable<Movie>
+
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">CinemaId</th>
+                    <th scope="col">Starring</th>
+                    <th scope="col">ReleaseDate</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @Html.DisplayForModel()
+            </tbody>
+        </table>
+
+        <a asp-action="Add" asp-route-cinemaId="@ViewBag.CinemaId">添加电影</a>
+
+        @*第一种调用复用的viewcomponent的方法*@
+        @*@await Component.InvokeAsync("MovieCount", new { cinemaId = 2 });*@
+
+        @*第二种调用复用的viewcomponent的方法*@
+        @*<vc:movie-count cinema-id="2"></vc:movie-count>*@
+    </div>
+</div>

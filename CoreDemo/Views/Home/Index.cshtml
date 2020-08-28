@@ -1,0 +1,31 @@
+﻿@using CoreDemo.models
+
+@model IEnumerable<Cinema>
+
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Capacity</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @Html.DisplayForModel()
+            </tbody>
+        </table>
+
+        <a asp-action="Add">添加电影院</a>
+
+        @*第一种调用复用的viewcomponent的方法*@
+        @*@await Component.InvokeAsync("MovieCount", new { cinemaId = 1 });*@
+        
+
+        @*第二种调用复用的viewcomponent的方法*@
+        @*<vc:movie-count cinema-id="1"></vc:movie-count>*@
+    </div>
+</div>

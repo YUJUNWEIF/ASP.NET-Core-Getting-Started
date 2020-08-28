@@ -1,0 +1,30 @@
+﻿@model CoreDemo.models.Cinema
+
+<div class="container">
+    <form asp-action="Add">
+        <div class="form-group row">
+            <label asp-for="Name" class="col-sm-2 col-form-label">电影院名称</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" asp-for="Name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Location" class="col-sm-2 col-form-label">电影院位置</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" asp-for="Location">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label asp-for="Capacity" class="col-sm-2 col-form-label">上映场次</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" asp-for="Capacity">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-10 offset-sm-2">
+                <button type="submit" class="btn btn-primary">submit</button>
+            </div>
+        </div>
+    </form>
+</div>
